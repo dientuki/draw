@@ -82,7 +82,7 @@ exports.clearCanvas = function(room) {
     }
     db.storeProject(room);
   }
-}
+};
 
 // Remove an item from the canvas
 exports.removeItem = function(room, artist, itemName) {
@@ -91,7 +91,7 @@ exports.removeItem = function(room, artist, itemName) {
     project.activeLayer._namedChildren[itemName][0].remove();
     db.storeProject(room);
   }
-}
+};
 
 // Move one or more existing items on the canvas
 exports.moveItemsProgress = function(room, artist, itemNames, delta) {
@@ -106,7 +106,7 @@ exports.moveItemsProgress = function(room, artist, itemNames, delta) {
       }
     }
   }
-}
+};
 
 // Move one or more existing items on the canvas
 // and write to DB
@@ -123,7 +123,7 @@ exports.moveItemsEnd = function(room, artist, itemNames, delta) {
     }
     db.storeProject(room);
   }
-}
+};
 
 // Add image to canvas
 exports.addImage = function(room, artist, data, position, name) {
@@ -135,4 +135,4 @@ exports.addImage = function(room, artist, data, position, name) {
     raster.name = name;
     db.storeProject(room);
   }
-}
+};

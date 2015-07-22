@@ -18,7 +18,7 @@ exports.specsList = function(callback){
     // res.send("var specs_list = " + JSON.stringify(files.sort()) + ";\n");
     callback(files.sort());
   });
-}
+};
 
 exports.getPluginTests = function(callback){
   var pluginSpecs = [];
@@ -35,11 +35,11 @@ exports.getPluginTests = function(callback){
     }
   });
   callback(null, pluginSpecs);
-}
+};
 
 exports.getCoreTests = function(callback){
   fs.readdir('tests/frontend/specs', function(err, coreSpecs){ // get the core test specs
     if(err){ return res.send(500); }
     callback(null, coreSpecs);
   });
-}
+};

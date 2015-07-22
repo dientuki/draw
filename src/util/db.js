@@ -1,6 +1,6 @@
 var settings = require('./Settings.js'),
     projects = require('./projects.js'),
-     ueberDB = require('ueberDB')
+    ueberDB = require('ueberDB');
 
 // Database connection
 var db = new ueberDB.database(settings.dbType, settings.dbSettings);
@@ -16,9 +16,9 @@ db.init(function(err){
 exports.storeProject = function(room) {
   var project = projects.projects[room].project;
   var json = project.exportJSON();
-  console.log("Writing project to database");
+  console.log("Writing project to database", {project: json});
   db.set(room, {project: json});
-}
+};
 
 // Try to load room from database
 exports.load = function(room, socket) {
@@ -40,6 +40,6 @@ exports.load = function(room, socket) {
   } else {
     loadError(socket);
   }
-}
+};
 
 exports.db = db;

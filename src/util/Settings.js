@@ -40,7 +40,7 @@ exports.loadSettings = function() {
 	
   //copy over defaults
   for(var k in exports.defaults){
-    exports[k] = exports.defaults[k]
+    exports[k] = exports.defaults[k];
   }
 
   //go through each key in the user supplied settings and replace the defaults
