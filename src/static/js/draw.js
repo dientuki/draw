@@ -39,7 +39,7 @@ $(document).ready(function() {
     scrolled(ev.pageX, ev.pageY, ev.detail);
   });
 
-  var drawingPNG = localStorage.getItem("drawingPNG"+room)
+  var drawingPNG = localStorage.getItem("drawingPNG"+room);
 
   // Temporarily set background as image from memory to improve UX
   $('#canvasContainer').css("background-image", 'url(' + drawingPNG + ')');
